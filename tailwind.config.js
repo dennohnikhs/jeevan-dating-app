@@ -26,6 +26,7 @@ export default {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       aushan: ["Kaushan Script", "cursive"],
+      solitreo: ["Solitreo", "cursive"],
     },
   },
   plugins: [],

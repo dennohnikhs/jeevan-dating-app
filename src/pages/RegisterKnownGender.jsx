@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navigation from "../components/nav-bar/CreateProfileNavigation";
+import { useNavigate } from "react-router-dom";
 
 const RegisterKnownGenderComponent = ({
   gender,
@@ -10,6 +11,8 @@ const RegisterKnownGenderComponent = ({
   residentialStatus,
   // onSubmit,
 }) => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     gender: gender || "",
     dateOfBirth: dateOfBirth || "",
@@ -31,7 +34,9 @@ const RegisterKnownGenderComponent = ({
     e.preventDefault();
     if (onSubmit) onSubmit(formData);
   };
-
+  const handlePersonalDetails = () => {
+    navigate("/career-details");
+  };
   return (
     <div className="bg-ja-white pb-4 ">
       <Navigation title="Personal Details" />
@@ -125,7 +130,10 @@ const RegisterKnownGenderComponent = ({
             </div>
           </form>
         </div>
-        <div className="bg-ja-gray text-ja-white m-0 text-ja-white   py-4 text-center">
+        <div
+          className="bg-ja-gray text-ja-white m-0 text-ja-white   py-4 text-center"
+          onClick={handlePersonalDetails}
+        >
           NEXT
         </div>
       </main>

@@ -1,6 +1,7 @@
 // ProfileForm.js
 import React, { useState } from "react";
 import NavigationHome from "../components/nav-bar/RegisterNavigation";
+import { useNavigate } from "react-router-dom";
 
 const NewUserRegistration = ({
   gender,
@@ -11,6 +12,7 @@ const NewUserRegistration = ({
   residentialStatus,
   // onSubmit,
 }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     gender: gender || "",
     dateOfBirth: dateOfBirth || "",
@@ -33,11 +35,14 @@ const NewUserRegistration = ({
     if (onSubmit) onSubmit(formData);
   };
 
+  const handlePersonalDetails = () => {
+    navigate("/career-details");
+  };
   return (
     <div className="bg-ja-white pb-4 ">
       <NavigationHome title="Personal Details" />
       <main className="flex justify-center flex-col px-4">
-        <div>
+        <div className="pb-5">
           <form onSubmit={handleSubmit}>
             <div className="py-4 flex flex-col">
               <div className="text-ja-gray">Gender *</div>
@@ -101,7 +106,7 @@ const NewUserRegistration = ({
               <label>
                 <select
                   name="country"
-                  className="w-full py-3 border-b border-ja-black"
+                  className="w-full py-3 border-b bg-ja-white border-ja-black"
                   value={formData.country}
                   onChange={handleChange}
                 >
@@ -118,7 +123,7 @@ const NewUserRegistration = ({
                 <input
                   type="text"
                   name="city"
-                  className="w-full py-3 border-b border-ja-black"
+                  className="w-full py-3 border-b bg-ja-white border-ja-black"
                   value={formData.city}
                   onChange={handleChange}
                 />
@@ -131,7 +136,7 @@ const NewUserRegistration = ({
               <label>
                 <select
                   type="text"
-                  className="w-full py-3 border-b border-ja-black"
+                  className="w-full py-3 border-b bg-ja-white border-ja-black"
                   name="residentialStatus"
                   value={formData.residentialStatus}
                   onChange={handleChange}
@@ -152,7 +157,10 @@ const NewUserRegistration = ({
             </div>
           </form>
         </div>
-        <div className="bg-ja-gray text-ja-white m-0 text-ja-white   py-4 text-center">
+        <div
+          className="bg-ja-red text-ja-white  py-4 text-center"
+          onClick={handlePersonalDetails}
+        >
           NEXT
         </div>
       </main>
