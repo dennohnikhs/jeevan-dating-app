@@ -36,11 +36,11 @@ const GridDisplay = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-0.5 bg-slate-200 hover:bg-ja-red">
+    <div className="grid grid-cols-2 gap-0.5 bg-slate-200 ">
       {gridItems.map((item) => (
         <div
           key={item.id}
-          className="flex items-center flex-col justify-center py-16  bg-ja-gray"
+          className="flex items-center flex-col justify-center active:bg-ja-red active:text-white py-16  bg-ja-gray  "
         >
           <Link to={item.link}>
             <div>{item.icon}</div>

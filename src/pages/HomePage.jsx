@@ -15,11 +15,13 @@ function HomePage() {
   return (
     <div>
       <Swiper />
-      <JaMainButton
-        buttonText="New user? Register for Free"
-        onClick={handleRegisterButtonClick}
-      />
-      <div className="flex flex-row justify-between">
+      <div className="px-2 py-5">
+        <JaMainButton
+          buttonText="New user? Register for Free"
+          onClick={handleRegisterButtonClick}
+        />
+      </div>
+      <div className="flex justify-between flex-row py-2 px-2">
         <JaSmallButton buttonText="Explore the App" />
         <JaSmallButton buttonText="Existing user? Login" />
       </div>

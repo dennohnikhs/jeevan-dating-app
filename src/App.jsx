@@ -5,6 +5,7 @@ import "./assets/styles/global.scss";
 import CreateUserProfile from "./pages/create-profile";
 import NewUserRegistration from "./pages/RegisterNewUser";
 import RegisterKnownGenderComponent from "./pages/RegisterKnownGender";
+import ExploreJeevanApp from "./pages/explore-app";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/create-profile" element={<CreateUserProfile />} />
         <Route path="/register" element={<NewUserRegistration />} />
+        <Route path="/explore-app" element={<ExploreJeevanApp />} />
         <Route
           path="/register/specific-gender"
           element={<RegisterKnownGenderComponent />}

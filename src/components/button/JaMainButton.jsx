@@ -9,9 +9,9 @@ function JaMainButton({ buttonText }) {
   };
 
   return (
-    <div className="flex justify-center m-5">
+    <div className="flex justify-center">
       <button
-        className="bg-ja-red   py-2 px-4 rounded-lg w-full "
+        className="bg-ja-red   py-2 px-2 rounded-lg w-full "
         onClick={goToRegister}
       >
         <span className="whitespace-nowrap text-ja-white font-bold ">
