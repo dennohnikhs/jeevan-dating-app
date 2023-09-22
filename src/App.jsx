@@ -1,16 +1,17 @@
 import React from "react";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/home";
 import "./assets/styles/global.scss";
 import CreateUserProfile from "./pages/create-profile";
-import NewUserRegistration from "./pages/RegisterNewUser";
-import RegisterKnownGenderComponent from "./pages/RegisterKnownGender";
+import NewUserRegistration from "./pages/register-new-user";
+import RegisterKnownGenderComponent from "./pages/register-known-gender";
 import ExploreJeevanApp from "./pages/explore-app";
-import { LogIn } from "react-feather";
 import CareerDetails from "./pages/career-details";
 import SocialDetails from "./pages/social-details";
-import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
+import LoginPage from "./pages/login-page";
+import LoginDetailsPage from "./pages/login-details";
+import LoginWithPassword from "./pages/login-with-password";
 
 function App() {
   return (
@@ -20,10 +21,12 @@ function App() {
         <Route path="/create-profile" element={<CreateUserProfile />} />
         <Route path="/register" element={<NewUserRegistration />} />
         <Route path="/explore-app" element={<ExploreJeevanApp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login-details" element={<LoginDetailsPage />} />
         <Route path="/career-details" element={<CareerDetails />} />
         <Route path="/social-details" element={<SocialDetails />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login-with-password" element={<LoginWithPassword />} />
         <Route
           path="/register/specific-gender"
           element={<RegisterKnownGenderComponent />}

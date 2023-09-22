@@ -10,8 +10,9 @@ export default {
       colors: {
         "ja-black": "#314051",
         "ja-red": "#d8465b",
-        "ja-gray": "#b9bdc2",
+        "ja-gray": "#5d5f61",
         "ja-white": "white",
+        "ja-light-gray": "#cecfd0",
       },
       screens: {
         mobile: "375px",

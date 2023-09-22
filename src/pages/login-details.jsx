@@ -1,13 +1,11 @@
 // ProfileForm.js
 import React, { useState } from "react";
-import NavigationHome from "../components/nav-bar/RegisterNavigation";
 import { useNavigate } from "react-router-dom";
-import CareerDetailsNavigation from "../components/nav-bar/CareerDetails";
 import { Settings } from "react-feather";
 import LoginPrivacySettings from "../components/button/JaPrivacy";
 import SocialDetailsNavigation from "../components/nav-bar/SocialDetails";
 
-const Login = ({
+const LoginDetailsPage = ({
   gender,
   dateOfBirth,
   height,
@@ -138,4 +136,4 @@ const Login = ({
   );
 };
 
-export default Login;
+export default LoginDetailsPage;

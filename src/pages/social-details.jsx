@@ -37,7 +37,7 @@ const SocialDetails = ({
   };
 
   const handleLoginDetails = () => {
-    navigate("/login");
+    navigate("/login-details");
   };
   return (
     <div className="bg-ja-white pb-4 ">
