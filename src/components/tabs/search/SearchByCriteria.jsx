@@ -59,7 +59,7 @@ const SearchByCriteria = ({
   };
 
   return (
-    <div className="bg-ja-white pb-4 ">
+    <div className="bg-ja-light-white pb-4 ">
       <main className="flex justify-center flex-col px-4">
         <div className="pb-5">
           <form onSubmit={handleSubmit}>

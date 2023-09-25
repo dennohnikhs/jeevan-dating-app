@@ -12,6 +12,8 @@ import Dashboard from "./pages/dashboard";
 import LoginPage from "./pages/login-page";
 import LoginDetailsPage from "./pages/login-details";
 import LoginWithPassword from "./pages/login-with-password";
+import SearchPartnerTabs from "./components/tabs/ExploreApp";
+import LoginWithPasswordPage from "./pages/login-with-password";
 
 function App() {
   return (
@@ -26,7 +28,11 @@ function App() {
         <Route path="/social-details" element={<SocialDetails />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/login-with-password" element={<LoginWithPassword />} />
+        <Route
+          path="/login-with-password"
+          element={<LoginWithPasswordPage />}
+        />
+
         <Route
           path="/register/specific-gender"
           element={<RegisterKnownGenderComponent />}

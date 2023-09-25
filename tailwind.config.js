@@ -11,8 +11,9 @@ export default {
         "ja-black": "#314051",
         "ja-red": "#d8465b",
         "ja-gray": "#5d5f61",
-        "ja-white": "white",
+        "ja-white": "#ffff",
         "ja-light-gray": "#cecfd0",
+        "ja-light-white": "#f5f5f5",
       },
       screens: {
         mobile: "375px",

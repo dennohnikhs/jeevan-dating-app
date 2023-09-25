@@ -11,7 +11,7 @@ function LoginBt({ buttonText }) {
   return (
     <button
       onClick={goToLoginPage}
-      className="bg-ja-white flex  justify-center  py-2 px-1 rounded-lg border border-ja-red"
+      className="bg-ja-white flex  justify-center  py-2 px-5 rounded-lg border border-ja-red"
     >
       <span className=" text-ja-red font-bold ">{buttonText}</span>
     </button>
