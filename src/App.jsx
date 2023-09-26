@@ -8,7 +8,7 @@ import RegisterKnownGenderComponent from "./pages/register-known-gender";
 import ExploreJeevanApp from "./pages/explore-app";
 import CareerDetails from "./pages/career-details";
 import SocialDetails from "./pages/social-details";
-import Dashboard from "./pages/dashboard";
+import DashBoard from "./pages/dashboard";
 import LoginPage from "./pages/login-page";
 import LoginDetailsPage from "./pages/login-details";
 import LoginWithPassword from "./pages/login-with-password";
@@ -26,7 +26,7 @@ function App() {
         <Route path="/login-details" element={<LoginDetailsPage />} />
         <Route path="/career-details" element={<CareerDetails />} />
         <Route path="/social-details" element={<SocialDetails />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/login" element={<LoginPage />} />
         <Route
           path="/login-with-password"

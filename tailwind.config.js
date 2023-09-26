@@ -9,11 +9,14 @@ export default {
     extend: {
       colors: {
         "ja-black": "#314051",
+        "ja-dark-blue": "#19191a",
         "ja-red": "#d8465b",
         "ja-gray": "#5d5f61",
-        "ja-white": "#ffff",
+        "ja-white": "#ffffff",
         "ja-light-gray": "#cecfd0",
         "ja-light-white": "#f5f5f5",
+        "ja-blue": "#0000f7",
+        "ja-white-smoke": "#faf7f8",
       },
       screens: {
         mobile: "375px",

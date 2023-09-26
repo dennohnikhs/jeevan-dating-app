@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import HomePageTabs from "../components/tabs/home-page-tabs/HomePageTabs";
 
-function Dashboard() {
-  return <div>Dashboard</div>;
-}
+const DashBoard = () => {
+  return (
+    <div>
+      <HomePageTabs />
+    </div>
+  );
+};
 
-export default Dashboard;
+export default DashBoard;
