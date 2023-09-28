@@ -14,6 +14,7 @@ import LoginDetailsPage from "./pages/login-details";
 import LoginWithPassword from "./pages/login-with-password";
 import SearchPartnerTabs from "./components/tabs/ExploreApp";
 import LoginWithPasswordPage from "./pages/login-with-password";
+import UpgradeMembership from "./pages/upgrade-membership";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/social-details" element={<SocialDetails />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/upgrade-membership" element={<UpgradeMembership />} />
         <Route
           path="/login-with-password"
           element={<LoginWithPasswordPage />}

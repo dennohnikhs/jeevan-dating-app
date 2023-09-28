@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import HomePageDashBoard from "../../screens/Home";
 import { Award, Clock, Heart, MessageCircle, Search } from "react-feather";
+import ActivityDashBoard from "../../screens/Activity";
+import SearchScreenDashBoard from "../../screens/Search";
+import MessengerDashBoard from "../../screens/messenger";
+import JaMatchesBtTab from "../../button/JaMatchesBtTab";
 
 function HomePageTabs() {
   const [selectedTab, setSelectedTab] = useState("matches");
@@ -8,57 +12,56 @@ function HomePageTabs() {
   const handleTabChange = (tab) => {
     setSelectedTab(tab);
   };
+
+  const tabs = {
+    matches: <HomePageDashBoard />,
+    activity: <ActivityDashBoard />,
+    search: <SearchScreenDashBoard />,
+    messenger: <MessengerDashBoard />,
+  };
+
+  const tabTogglers = [
+    {
+      name: "matches",
+      Icon: Heart,
+    },
+    {
+      name: "activity",
+      Icon: Clock,
+    },
+    {
+      name: "search",
+      Icon: Search,
+    },
+    {
+      name: "messenger",
+      Icon: MessageCircle,
+    },
+    {
+      name: "upgrade",
+      Icon: Award,
+    },
+  ];
+
   return (
     <div>
       <div>
-        <div className="flex justify-between flex-row bg-ja-white fixed bottom-0 w-full  p-4 border-t border-ja-gray rounded-b-lg shadow-green-950">
-          <button
-            onClick={() => handleTabChange("matches")}
-            className={`py-3 text-ja-light-gray font-bold font-lg px-2  ${
-              selectedTab === "matches" ? "text-ja-red" : ""
-            }`}
-          >
-            <Heart />
-            Matches
-          </button>
-          <button
-            onClick={() => handleTabChange("activity")}
-            className={`py-3 text-ja-light-gray font-bold font-lg px-2 ${
-              selectedTab === "activity" ? "text-ja-red" : ""
-            }`}
-          >
-            <Clock />
-            Activity
-          </button>
-          <button
-            onClick={() => handleTabChange("search")}
-            className={`py-3 text-ja-light-gray font-bold font-lg px-2 ${
-              selectedTab === "search" ? " text-ja-red" : ""
-            }`}
-          >
-            <Search />
-            Search
-          </button>
-          <button
-            onClick={() => handleTabChange("messenger")}
-            className={`py-3 text-ja-light-gray font-bold font-lg px-2 ${
-              selectedTab === "messenger" ? "text-ja-red " : ""
-            }`}
-          >
-            <MessageCircle />
-            Messenger
-          </button>
-          <button
-            onClick={() => handleTabChange("upgrade")}
-            className={`py-3 text-ja-light-gray font-bold font-lg px-2 ${
-              selectedTab === "upgrade" ? "text-ja-red" : ""
-            }`}
-          >
-            <Award />
-            Upgrade
-          </button>
+        <div className="flex justify-between flex-row bg-ja-white fixed bottom-0 w-full  p-4 border-t border-ja-gray rounded-b-lg">
+          {tabTogglers.map((tabToggler) => (
+            <JaMatchesBtTab
+              handleTabChange={handleTabChange}
+              tabName={tabToggler.name}
+              selectedTab={selectedTab}
+              key={`${tabToggler.name}-tab-togggler`}
+            >
+              <span>
+                <tabToggler.Icon />
+              </span>
+              <span className="capitalize">{tabToggler.name}</span>
+            </JaMatchesBtTab>
+          ))}
         </div>
-        {selectedTab === "matches" && <HomePageDashBoard />}
+        {tabs[selectedTab]}
       </div>
     </div>
   );

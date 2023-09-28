@@ -13,10 +13,11 @@ export default {
         "ja-red": "#d8465b",
         "ja-gray": "#5d5f61",
         "ja-white": "#ffffff",
-        "ja-light-gray": "#cecfd0",
+        "ja-light-gray": "#7c7c7d",
         "ja-light-white": "#f5f5f5",
         "ja-blue": "#0000f7",
         "ja-white-smoke": "#faf7f8",
+        "ja-yellow": "#FFFF00",
       },
       screens: {
         mobile: "375px",

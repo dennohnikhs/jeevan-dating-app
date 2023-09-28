@@ -36,8 +36,6 @@ const SearchByCriteria = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (onSubmit) onSubmit(formData);
-    console.log("Selected option:", selectedOption);
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -59,7 +57,7 @@ const SearchByCriteria = ({
   };
 
   return (
-    <div className="bg-ja-light-white pb-4 ">
+    <div className="bg-ja-light-white pb-32 ">
       <main className="flex justify-center flex-col px-4">
         <div className="pb-5">
           <form onSubmit={handleSubmit}>
@@ -346,7 +344,7 @@ const SearchByCriteria = ({
           </button>
         </div>
         <div
-          className="bg-ja-red text-ja-white  py-4 text-center fixed bottom-0 left-0 right-0"
+          className="bg-ja-red text-ja-white  py-4 text-center fixed bottom-32 left-0 right-0"
           onClick={handleSearchByCriteria}
         >
           SEARCH

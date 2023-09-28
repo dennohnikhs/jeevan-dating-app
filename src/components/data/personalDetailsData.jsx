@@ -1,6 +1,7 @@
 const personalDetailsData = {
-  backgroundImage: "path to image",
-  userName: "Patricia",
+  backgroundImage:
+    "https://images.pexels.com/photos/18467221/pexels-photo-18467221.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+  userName: "Akash",
   lastSeen: "9:53AM",
   age: "23 years",
   height: "'5.5'",

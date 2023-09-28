@@ -1,8 +1,5 @@
-// ProfileForm.js
 import React, { useState } from "react";
-import NavigationHome from "../components/nav-bar/RegisterNavigation";
 import { useNavigate } from "react-router-dom";
-import NavigateToPersonalDetails from "../components/nav-bar/PersoanalDetails";
 
 const CareerDetails = ({
   gender,
