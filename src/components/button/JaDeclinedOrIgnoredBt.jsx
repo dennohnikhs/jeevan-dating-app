@@ -5,7 +5,7 @@ import backgroundImage from "../../assets/images/bg.jpg";
 function DeclinedOrIgnoredInterests({ declinedOrCancelledInterests }) {
   return (
     <div>
-      <button className="bg-ja-white flex flex-row gap-1 border-t border-ja-light-gray shadow-lg   w-full py-4 px-4 justify-between">
+      <button className="absolute bg-ja-white flex flex-row gap-1 border-t border-ja-light-gray shadow-lg   w-full py-4 px-4 justify-between pb-[116px]">
         <span className="text-ja-black">
           <h1>Declined/Cancelled Interests({declinedOrCancelledInterests})</h1>
           <h2 className=" whitespace-nowrap overflow-hidden  text-sm  py-1.5 px-2 text-ja-gray  justify-center   ">

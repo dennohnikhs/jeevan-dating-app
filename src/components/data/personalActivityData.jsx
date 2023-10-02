@@ -1,8 +1,7 @@
-const personalDetails = {
+const userActivityPersonalDetails = {
   backgroundImage:
-    "https://images.pexels.com/photos/14653981/pexels-photo-14653981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  pictures:
-    "https://images.pexels.com/photos/14653981/pexels-photo-14653981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/18467221/pexels-photo-18467221.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+
   lastSeen: "09:00AM",
   userName: "Kiptoo",
   age: "40",
@@ -14,3 +13,4 @@ const personalDetails = {
   education: "Degree",
   maritalStatus: "Never Married",
 };
+export default userActivityPersonalDetails;

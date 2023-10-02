@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavigateToPersonalDetails from "../components/nav-bar/PersonalDetails";
 
 const CareerDetails = ({
   gender,

@@ -1,10 +1,10 @@
 import React from "react";
 import { Check, CornerUpRight, User } from "react-feather";
-import CardActions from "./CardActions";
+import CardActions from "./PersonalDetailsCardActions";
 
 //we will be passing in the background image like this inside the component using this
 //<YourComponent backgroundImage="path_to_your_image.jpg" />
-function PersonalDetailsCard({
+function PersonalDetailsCardComponent({
   pictures,
   backgroundImage,
   userName,
@@ -25,14 +25,14 @@ function PersonalDetailsCard({
   return (
     <div className="mt-16 ">
       <div
-        className="relative bg-cover bg-ja-gray bg-center  p-3 py-4  rounded-t h-[590px] "
+        className="relative bg-cover bg-no-repeat bg-ja-gray bg-center  rounded-t h-[590px] "
         style={cardBackgroundImage}
       >
         <div className="text-ja-white flex justify-end px-3 py-4">
           {pictures}
           <User />
         </div>
-        <div className="absolute bottom-0  w-64 ">
+        <div className=" px-3 absolute bottom-0  w-64 ">
           <div className="flex flex-row gap-2">
             <div className="text-ja-white font-bold text-2xl">{userName}</div>
             <span className="text-ja-blue font-4xl font-bold">
@@ -64,4 +64,4 @@ function PersonalDetailsCard({
   );
 }
 
-export default PersonalDetailsCard;
+export default PersonalDetailsCardComponent;

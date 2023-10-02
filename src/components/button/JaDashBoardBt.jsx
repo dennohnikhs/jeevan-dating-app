@@ -1,7 +1,11 @@
 import React from "react";
-import { Heart } from "react-feather";
 
-function JaMatchesBtTab({ tabName, selectedTab, handleTabChange, children }) {
+function DashBoardTabButton({
+  tabName,
+  selectedTab,
+  handleTabChange,
+  children,
+}) {
   return (
     <button
       className={` py-3 text-ja-light-gray font-bold font-lg px-2 flex flex-col items-center ${
@@ -14,4 +18,4 @@ function JaMatchesBtTab({ tabName, selectedTab, handleTabChange, children }) {
   );
 }
 
-export default JaMatchesBtTab;
+export default DashBoardTabButton;

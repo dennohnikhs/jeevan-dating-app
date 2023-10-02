@@ -4,7 +4,7 @@ import { Award, Clock, Heart, MessageCircle, Search } from "react-feather";
 import ActivityDashBoard from "../../screens/Activity";
 import SearchScreenDashBoard from "../../screens/Search";
 import MessengerDashBoard from "../../screens/messenger";
-import JaMatchesBtTab from "../../button/JaMatchesBtTab";
+import DashBoardTabButton from "../../button/JaDashBoardBt";
 
 function HomePageTabs() {
   const [selectedTab, setSelectedTab] = useState("matches");
@@ -45,24 +45,22 @@ function HomePageTabs() {
 
   return (
     <div>
-      <div>
-        <div className="flex justify-between flex-row bg-ja-white fixed bottom-0 w-full  p-4 border-t border-ja-gray rounded-b-lg">
-          {tabTogglers.map((tabToggler) => (
-            <JaMatchesBtTab
-              handleTabChange={handleTabChange}
-              tabName={tabToggler.name}
-              selectedTab={selectedTab}
-              key={`${tabToggler.name}-tab-togggler`}
-            >
-              <span>
-                <tabToggler.Icon />
-              </span>
-              <span className="capitalize">{tabToggler.name}</span>
-            </JaMatchesBtTab>
-          ))}
-        </div>
-        {tabs[selectedTab]}
+      <div className="flex justify-between flex-row z-50 bg-ja-white fixed bottom-0 w-full  p-4 border-t border-ja-gray rounded-b-lg">
+        {tabTogglers.map((tabToggler) => (
+          <DashBoardTabButton
+            handleTabChange={handleTabChange}
+            tabName={tabToggler.name}
+            selectedTab={selectedTab}
+            key={`${tabToggler.name}-tab-togggler`}
+          >
+            <span>
+              <tabToggler.Icon />
+            </span>
+            <span className="capitalize">{tabToggler.name}</span>
+          </DashBoardTabButton>
+        ))}
       </div>
+      {tabs[selectedTab]}
     </div>
   );
 }

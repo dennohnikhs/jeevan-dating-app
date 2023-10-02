@@ -1,10 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
 import "swiper/css";
-import userActivityPersonalDetails from "../data/personalActivityData";
-import UserSentInterests from "../match-card/UserActivitySentCardInterests";
+import Slider from "../slider/Slider";
+import homePageData from "../data/HomePage";
 
-function UserSentInterestsSwiper() {
+function HomePageSwiper() {
   return (
     <Swiper
       spaceBetween={50}
@@ -13,16 +14,16 @@ function UserSentInterestsSwiper() {
       onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
-        <UserSentInterests {...userActivityPersonalDetails} />
+        <Slider {...homePageData} />
       </SwiperSlide>
       <SwiperSlide>
-        <UserSentInterests {...userActivityPersonalDetails} />
+        <Slider {...homePageData} />
       </SwiperSlide>
       <SwiperSlide>
-        <UserSentInterests {...userActivityPersonalDetails} />
+        <Slider {...homePageData} />
       </SwiperSlide>
     </Swiper>
   );
 }
 
-export default UserSentInterestsSwiper;
+export default HomePageSwiper;
