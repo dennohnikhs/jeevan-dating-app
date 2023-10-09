@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import HomePageDashBoard from "../../screens/Home";
 import { Award, Clock, Heart, MessageCircle, Search } from "react-feather";
 import ActivityDashBoard from "../../screens/Activity";
 import SearchScreenDashBoard from "../../screens/Search";
 import MessengerDashBoard from "../../screens/messenger";
 import DashBoardTabButton from "../../button/JaDashBoardBt";
+import UpgradeMembershipDashBoard from "../../screens/Upgrade";
+import { GlobalContext } from "../../../../context/GlobalContext";
 
 function HomePageTabs() {
-  const [selectedTab, setSelectedTab] = useState("matches");
+  const { selectedTab, setSelectedTab } = useContext(GlobalContext); // Set initial state to tab from URL or "matches"
 
   const handleTabChange = (tab) => {
     setSelectedTab(tab);
@@ -18,6 +20,7 @@ function HomePageTabs() {
     activity: <ActivityDashBoard />,
     search: <SearchScreenDashBoard />,
     messenger: <MessengerDashBoard />,
+    upgrade: <UpgradeMembershipDashBoard />,
   };
 
   const tabTogglers = [
@@ -45,7 +48,7 @@ function HomePageTabs() {
 
   return (
     <div>
-      <div className="flex justify-between flex-row z-50 bg-ja-white fixed bottom-0 w-full  p-4 border-t border-ja-gray rounded-b-lg">
+      <div className="flex justify-between flex-row z-50 bg-ja-white fixed bottom-0 w-full shadow-md border-t py-3 px-4  rounded-b-lg">
         {tabTogglers.map((tabToggler) => (
           <DashBoardTabButton
             handleTabChange={handleTabChange}

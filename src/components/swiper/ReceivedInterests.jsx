@@ -5,10 +5,8 @@ import { Link } from "react-router-dom";
 function ReceivedInterests() {
   return (
     <div className="px-4  py-3">
-      <div className="bg-ja-light-gray py-5 px-4 rounded-md">
+      <div className="bg-ja-light-gray py-2 px-4 rounded-md">
         <div className="flex justify-center flex-col  items-center   py-8">
-          <CreditCard />
-          <CreditCard />
           <CreditCard />
         </div>
         <div className="ja-black flex justify-center py-2">

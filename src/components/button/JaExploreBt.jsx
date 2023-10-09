@@ -11,7 +11,7 @@ function JaExplore({ buttonText }) {
   return (
     <button
       onClick={goToRegister}
-      className="bg-ja-white flex  justify-center  py-2 px-1 rounded-lg border border-ja-red"
+      className="bg-ja-white flex whitespace-nowrap  justify-center  py-2 px-1 rounded-lg border border-ja-red text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
     >
       <span className=" text-ja-red font-bold ">{buttonText}</span>
     </button>

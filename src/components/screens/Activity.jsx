@@ -14,10 +14,6 @@ function ActivityDashBoard() {
         <UserActivityTopMenu profileVisits="9" shortlistedProfiles="0" />
 
         <UserActivityTabs />
-        <div className="flex flex-row justify-between text-ja-red font-poppins font-semibold py-3">
-          <Link>View all sent interests</Link>
-          <ArrowRight />
-        </div>
 
         <DeclinedOrIgnoredInterests />
       </div>

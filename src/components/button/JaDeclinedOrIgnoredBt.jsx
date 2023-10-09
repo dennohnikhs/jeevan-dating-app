@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronRight, FastForward } from "react-feather";
+import { ChevronRight } from "react-feather";
 import backgroundImage from "../../assets/images/bg.jpg";
 
 function DeclinedOrIgnoredInterests({ declinedOrCancelledInterests }) {

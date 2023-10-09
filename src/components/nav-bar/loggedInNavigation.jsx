@@ -10,7 +10,7 @@ function LoggedInNavigation({ title }) {
   return (
     <div className="top-0 left-0 right-0 sticky bg-ja-black flex flex-row justify-between font-bold z-50">
       <button
-        className="flex flex-row py-6 px-4 text-white gap-3 text-ja-white"
+        className="flex flex-row py-6 px-4 text-white gap-3 "
         onClick={handleProfileSideBarToggle}
       >
         <User />
