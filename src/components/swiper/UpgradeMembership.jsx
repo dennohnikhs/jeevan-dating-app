@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import "swiper/swiper-bundle.css"; // Import the main CSS file
+
 import ProLiteUpgradeMainCard from "../membership-upgrade/ProLiteUpgradeMainCard";
 import proLiteMainCardData from "../data/ProLiteMainCardData";
 import ProUpgradeMainCard from "../membership-upgrade/ProUpgradeMainCard";
@@ -13,10 +14,11 @@ import ExclusiveUpgradeMainCard from "../membership-upgrade/ExclusiveMainCard";
 function ProLiteUpgradeSwiper() {
   return (
     <Swiper
-      spaceBetween={50}
       slidesPerView={1}
+      spaceBetween={10}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
+      pagination={{ clickable: true }}
     >
       <SwiperSlide>
         <ProLiteUpgradeMainCard {...proLiteMainCardData} />

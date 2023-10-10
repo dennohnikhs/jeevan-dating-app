@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Check, X } from "react-feather";
+import SelectDurationCard from "./UpgradeMiniCard";
 
 function ProMaxUpgradeMainCard({
   cardTypeName,
@@ -12,6 +13,11 @@ function ProMaxUpgradeMainCard({
   enabledInfoText7,
   disabledInfoText1,
 }) {
+  const [selectedPlan, setSelectedPlan] = useState("3-months");
+
+  const handleSelectPlan = (option) => {
+    setSelectedPlan(option);
+  };
   return (
     <div>
       <div className="text-ja-black border gap-3 bg-ja-white shadow-lg py-5 px-3 rounded-lg">
@@ -86,6 +92,32 @@ function ProMaxUpgradeMainCard({
         <h1 className="py-5 px-3 text-ja-light-blue font-poppins font-semibold text-xl pb-2">
           Select Duration
         </h1>
+        <div className="flex flex-row gap-2 py-6 justify-center">
+          <SelectDurationCard
+            durationInMonths="3-months"
+            discount="$125"
+            amount="$38.75"
+            amountPayableMonthly="$12.92/mon"
+            selectedPlan={selectedPlan}
+            onSelectPlan={handleSelectPlan}
+          />
+          <SelectDurationCard
+            durationInMonths="6-months"
+            discount="$175"
+            amount="$54.25"
+            amountPayableMonthly="$9.04/mon"
+            selectedPlan={selectedPlan}
+            onSelectPlan={handleSelectPlan}
+          />
+          <SelectDurationCard
+            durationInMonths="Till Marriage"
+            discount="$350"
+            amount="$108.5"
+            amountPayableMonthly="."
+            selectedPlan={selectedPlan}
+            onSelectPlan={handleSelectPlan}
+          />
+        </div>
       </div>
     </div>
   );

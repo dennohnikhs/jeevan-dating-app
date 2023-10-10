@@ -33,7 +33,6 @@ function App() {
           <Route path="/social-details" element={<SocialDetails />} />
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/login" element={<LoginPage />} />
-
           <Route path="/upgrade-plan" element={<ProLiteDashBoard />} />
           <Route path="/upgrade-membership" element={<HomePageTabs />} />
           <Route
@@ -44,12 +43,10 @@ function App() {
             path="/membership-upgrade-payments-page"
             element={<MembershipUpgradePaymentsPage />}
           />
-
           <Route
             path="/login-with-password"
             element={<LoginWithPasswordPage />}
           />
-
           <Route
             path="/register/specific-gender"
             element={<RegisterKnownGenderComponent />}

@@ -13,6 +13,7 @@ export default {
         "ja-red": "#d8465b",
         "ja-light-violet": "#fefdff",
         "ja-gray": "#5d5f61",
+        "ja-light-white-smoke": "#f6f5f8",
         "ja-white": "#ffffff",
         "ja-light-gray": "#7c7c7d",
         "ja-light-light-gray": "#e5e5e5",

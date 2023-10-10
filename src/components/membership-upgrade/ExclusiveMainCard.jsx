@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Award, Check, Clock, PhoneIncoming, X } from "react-feather";
+import SelectDurationCard from "./UpgradeMiniCard";
 
 function ExclusiveUpgradeMainCard({
   cardTypeName,
@@ -11,6 +12,11 @@ function ExclusiveUpgradeMainCard({
   descriptionText3,
   headlineText4,
 }) {
+  const [selectedPlan, setSelectedPlan] = useState("3-months");
+
+  const handleSelectPlan = (option) => {
+    setSelectedPlan(option);
+  };
   return (
     <div>
       <div className="text-ja-dark-blue border  gap-4 bg-ja-white shadow-lg py-5 px-3 rounded-lg">
@@ -68,6 +74,32 @@ function ExclusiveUpgradeMainCard({
         <h1 className="py-5 px-3 text-ja-light-blue font-poppins font-semibold text-xl pb-2">
           Select Duration
         </h1>
+        <div className="flex flex-row gap-2 py-6 justify-center">
+          <SelectDurationCard
+            durationInMonths="3-months"
+            discount="$950"
+            amount="$475"
+            amountPayableMonthly="$158.33/mon"
+            selectedPlan={selectedPlan}
+            onSelectPlan={handleSelectPlan}
+          />
+          <SelectDurationCard
+            durationInMonths="6-months"
+            discount="$1,500"
+            amount="$750"
+            amountPayableMonthly="$125/mon"
+            selectedPlan={selectedPlan}
+            onSelectPlan={handleSelectPlan}
+          />
+          <SelectDurationCard
+            durationInMonths="12 months"
+            discount="$2,500"
+            amount="$1,250"
+            amountPayableMonthly="."
+            selectedPlan={selectedPlan}
+            onSelectPlan={handleSelectPlan}
+          />
+        </div>
       </div>
     </div>
   );
